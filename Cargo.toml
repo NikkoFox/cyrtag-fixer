@@ -1,6 +1,6 @@
 [package]
 name = "cyrtag-fixer"
-version = "0.1.0"
+version = "0.1.2"
 edition = "2024"
 description = "Fix Cyrillic mojibake (CP1251 -> UTF-8) in audio tags and .cue files"
 license = "MIT"
