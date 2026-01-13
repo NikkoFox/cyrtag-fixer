@@ -1,6 +1,6 @@
 use clap::Parser;
 use colored::*;
-use encoding_rs::WINDOWS_1251;
+use encoding_rs::{WINDOWS_1251, WINDOWS_1252};
 use lofty::config::{ParseOptions, WriteOptions};
 use lofty::prelude::*;
 use lofty::probe::Probe;
@@ -137,10 +137,9 @@ fn fix_mojibake(text: &str, cyr_threshold: f64) -> Option<String> {
         return None;
     }
 
-    let (latin1_bytes, _, _) = WINDOWS_1251.encode(text);
+    let (latin1_bytes, _, _) = WINDOWS_1252.encode(text);
     let (decoded, _, _) = WINDOWS_1251.decode(&latin1_bytes);
     let decoded_str = decoded.trim().to_string();
-
     let len = decoded_str.chars().count() as f64;
 
     let cyr_ratio = cyrillic_count(&decoded_str) as f64 / len;
