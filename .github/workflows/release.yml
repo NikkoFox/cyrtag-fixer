@@ -60,18 +60,18 @@ jobs:
           fi
       - name: Archive (tar, Unix)
         if: matrix.targets.os != 'windows-latest'
-        run: tar -czf cyrtag-fixer-${{ env.VERSION }}-${{ matrix.targets.target }}.tar.gz -C target/${{ matrix.targets.target }}/release cyrtag-fixer
+        run: tar -czf cyrtag-fix-${{ env.VERSION }}-${{ matrix.targets.target }}.tar.gz -C target/${{ matrix.targets.target }}/release cyrtag-fix
       - name: Archive (zip, Windows)
         if: matrix.targets.os == 'windows-latest'
         shell: bash
-        run: 7z a cyrtag-fixer-${{ env.VERSION }}-${{ matrix.targets.target }}.zip target/${{ matrix.targets.target }}/release/cyrtag-fixer.exe
+        run: 7z a cyrtag-fix-${{ env.VERSION }}-${{ matrix.targets.target }}.zip target/${{ matrix.targets.target }}/release/cyrtag-fix.exe
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: release-${{ matrix.targets.target }}
           path: |
-            cyrtag-fixer-${{ env.VERSION }}-${{ matrix.targets.target }}.tar.gz
-            cyrtag-fixer-${{ env.VERSION }}-${{ matrix.targets.target }}.zip
+            cyrtag-fix-${{ env.VERSION }}-${{ matrix.targets.target }}.tar.gz
+            cyrtag-fix-${{ env.VERSION }}-${{ matrix.targets.target }}.zip
           if-no-files-found: error
 
   release:

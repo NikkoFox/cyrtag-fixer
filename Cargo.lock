@@ -135,8 +135,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "cyrtag-fixer"
-version = "0.1.2"
+name = "cyrtag-fix"
+version = "0.1.3"
 dependencies = [
  "clap",
  "colored",

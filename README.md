@@ -1,4 +1,4 @@
-# 🎵 cyrtag-fixer
+# 🎵 cyrtag-fix
 
 CLI-утилита для **исправления кириллических «кракозябр»**
 в тегах музыкальных файлов и `.cue` файлах.
@@ -7,9 +7,9 @@ CLI-утилита для **исправления кириллических «
 
 Работает рекурсивно по каталогу с созданием бэкапов.
 
-[![GitHub Release](https://img.shields.io/github/v/release/NikkoFox/cyrtag-fixer?include_prereleases&sort=semver)](https://github.com/NikkoFox/cyrtag-fixer/releases/latest)
-[![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/NikkoFox/cyrtag-fixer/total)](https://github.com/NikkoFox/cyrtag-fixer/releases)
-[![GitHub License](https://img.shields.io/github/license/NikkoFox/cyrtag-fixer)](LICENSE)
+[![GitHub Release](https://img.shields.io/github/v/release/NikkoFox/cyrtag-fix?include_prereleases&sort=semver)](https://github.com/NikkoFox/cyrtag-fix/releases/latest)
+[![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/NikkoFox/cyrtag-fix/total)](https://github.com/NikkoFox/cyrtag-fix/releases)
+[![GitHub License](https://img.shields.io/github/license/NikkoFox/cyrtag-fix)](LICENSE)
 
 ![](example.gif)
 ---
@@ -29,37 +29,37 @@ CLI-утилита для **исправления кириллических «
 
 ### Готовый билд
 
-1. [Скачайте](https://github.com/NikkoFox/cyrtag-fixer/releases/latest) и распакуйте архив под вашу операционную систему.
-2. Запустите **cyrtag-fixer** из командной строки с указанием пути `./cyrtag-fixer ~/music`
+1. [Скачайте](https://github.com/NikkoFox/cyrtag-fix/releases/latest) и распакуйте архив под вашу операционную систему.
+2. Запустите **cyrtag-fix** из командной строки с указанием пути `./cyrtag-fix ~/music`
 
 ### Через Cargo
 
 ```bash
-cargo install --git https://github.com/NikkoFox/cyrtag-fixer
+cargo install --git https://github.com/NikkoFox/cyrtag-fix
 ```
 
 ### Из исходников
 
 ```bash
-git clone https://github.com/NikkoFox/cyrtag-fixer.git
-cd cyrtag-fixer
+git clone https://github.com/NikkoFox/cyrtag-fix.git
+cd cyrtag-fix
 cargo build --release
 ```
 
-Бинарник будет доступен по пути: `target/release/cyrtag-fixer`
+Бинарник будет доступен по пути: `target/release/cyrtag-fix`
 
 ---
 
 ## 🚀 Быстрый старт
 
 ```bash
-cyrtag-fixer <ПУТЬ>
+cyrtag-fix <ПУТЬ>
 ```
 
 ### Пример:
 
 ```bash
-cyrtag-fixer ~/music
+cyrtag-fix ~/music
 ```
 
 Утилита рекурсивно обойдёт каталог и:
@@ -75,7 +75,7 @@ cyrtag-fixer ~/music
 ```text
 Утилита для исправления кириллических кракозябр кодировки cp1251 в тегах музыкальных и .cue файлов
 
-Usage: cyrtag-fixer [OPTIONS] <PATH>
+Usage: cyrtag-fix [OPTIONS] <PATH>
 
 Arguments:
   <PATH>  Путь к папке с музыкой
