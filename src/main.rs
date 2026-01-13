@@ -5,7 +5,7 @@ use lofty::config::{ParseOptions, WriteOptions};
 use lofty::prelude::*;
 use lofty::probe::Probe;
 use lofty::tag::TagExt;
-use phf::{phf_set, Set};
+use phf::{Set, phf_set};
 use std::fmt::Debug;
 use std::fs::{self, File};
 use std::io::Read;
@@ -116,7 +116,7 @@ fn main() {
 
 // fn has_cyrillic(s: &str) -> bool {
 //     s.chars()
-//         .any(|c| matches!(c, 'а'..='я' | 'А'..='Я' | 'ё' | 'Ё'))
+//         .any(|c| matches!(c, 'а'.='я' | 'А'.='Я' | 'ё' | 'Ё'))
 // }
 
 fn is_cyrillic(c: &char) -> bool {
