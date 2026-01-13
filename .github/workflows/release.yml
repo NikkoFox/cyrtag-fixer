@@ -57,7 +57,8 @@ jobs:
         run: tar -czf cyrtag-fixer-${{ env.RELEASE_VERSION }}-${{ matrix.targets.target }}.tar.gz -C target/${{ matrix.targets.target }}/release cyrtag-fixer
       - name: Archive (zip, Windows)
         if: matrix.targets.os == 'windows-latest'
-        run: zip -j cyrtag-fixer-${{ env.RELEASE_VERSION }}-${{ matrix.targets.target }}.zip target/${{ matrix.targets.target }}/release/cyrtag-fixer.exe
+        shell: bash
+        run: 7z a cyrtag-fixer-${{ env.RELEASE_VERSION }}-${{ matrix.targets.target }}.zip target/${{ matrix.targets.target }}/release/cyrtag-fixer.exe
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
