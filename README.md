@@ -11,6 +11,7 @@ CLI-утилита для **исправления кириллических «
 [![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/NikkoFox/cyrtag-fixer/total)](https://github.com/NikkoFox/cyrtag-fixer/releases)
 [![GitHub License](https://img.shields.io/github/license/NikkoFox/cyrtag-fixer)](LICENSE)
 
+![](example.gif)
 ---
 
 ## ✨ Возможности
